@@ -17,7 +17,7 @@ export default ({ children, title, subHeader }: Props): JSX.Element => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <GlobalStyle />
-    <x.div display="flex" justifyContent="center">
+    <x.div display="flex" justifyContent="center" pb="56px">
       <x.div
         flex="1"
         w={{ sm: '750px' }}
