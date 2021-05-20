@@ -9,7 +9,7 @@ type Props = {
 }
 
 export default ({ children, subHeader }: Props): JSX.Element => (
-  <x.div>
+  <x.div mb="56px">
     <x.h1 color="heading" fontSize="heading" lineHeight="heading">
       {children}
     </x.h1>

@@ -3,16 +3,20 @@
 exports[`Header matches snapshot 1`] = `
 <DocumentFragment>
   .c0.c0 {
+  margin-bottom: 56px;
+}
+
+.c1.c1 {
   color: heading;
   font-size: heading;
   line-height: heading;
 }
 
 <div
-    class=""
+    class="c0"
   >
     <h1
-      class="c0"
+      class="c1"
     >
       Hello World
     </h1>
@@ -22,27 +26,31 @@ exports[`Header matches snapshot 1`] = `
 
 exports[`Header with subHeader matches snapshot 1`] = `
 <DocumentFragment>
-  .c1.c1 {
+  .c0.c0 {
+  margin-bottom: 56px;
+}
+
+.c2.c2 {
   color: text;
   font-size: 1px;
 }
 
-.c0.c0 {
+.c1.c1 {
   color: heading;
   font-size: heading;
   line-height: heading;
 }
 
 <div
-    class=""
+    class="c0"
   >
     <h1
-      class="c0"
+      class="c1"
     >
       Hello World
     </h1>
     <div
-      class="c1"
+      class="c2"
     >
       …
     </div>
