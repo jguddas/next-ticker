@@ -1,12 +1,12 @@
 import React from 'react'
 import { x } from '@xstyled/styled-components'
 
-type Props = {
-  children: React.ReactNode
+interface Props extends React.ComponentProps<typeof x.div> {
+  value?: string
 }
 
-export default ({ children }: Props): JSX.Element => (
-  <x.div color="text" fontSize lineHeight>
+export default ({ children, ...props }: Props): JSX.Element => (
+  <x.div color="text" fontSize lineHeight {...props}>
     {children}
   </x.div>
 )
