@@ -2,11 +2,35 @@
 
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
-  <div
-    class="sc-cxNHIi YhLon"
+  .c0.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c0.c0 undefined {
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+}
+
+.c1.c1 {
+  margin-top: 128px;
+  margin-right: 120px;
+  margin-left: 120px;
+}
+
+.c1.c1 undefined {
+  width: 750px;
+}
+
+<div
+    class="c0"
   >
     <div
-      class="sc-cxNHIi eLfmxP"
+      class="c1"
     >
       Hello World
     </div>
