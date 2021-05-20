@@ -10,6 +10,8 @@ export default {
     background: defaultTheme.colors.black,
     heading: defaultTheme.colors.white,
     title: defaultTheme.colors.white,
+    donutSecondary: '#E5E5E5',
+    donutPrimary: '#523bd4',
   },
   borders: {
     default: '1px solid #2C2C2C',

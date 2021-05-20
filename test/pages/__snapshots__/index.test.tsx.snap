@@ -120,6 +120,25 @@ exports[`Home page matches snapshot 1`] = `
   background-color: inputBackground;
 }
 
+.c14.c14 {
+  stroke: donutSecondary;
+  opacity: 0.125;
+}
+
+.c15.c15 {
+  stroke: donutPrimary;
+  -webkit-transform: rotate(-90 16 16);
+  -ms-transform: rotate(-90 16 16);
+  transform: rotate(-90 16 16);
+}
+
+.c13.c13 {
+  -webkit-transform: rotate(-90deg);
+  -ms-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  fill: none;
+}
+
 <div
     class="c0"
   >
@@ -195,6 +214,29 @@ exports[`Home page matches snapshot 1`] = `
           >
             Information
           </div>
+          <svg
+            class="c13"
+            height="140"
+            role="img"
+            stroke-width="2"
+            viewBox="0 0 32 32"
+            width="140"
+          >
+            <circle
+              class="c14"
+              cx="16"
+              cy="16"
+              r="14"
+            />
+            <circle
+              class="c15"
+              cx="16"
+              cy="16"
+              r="14"
+              stroke-dasharray="87.96459430051421"
+              stroke-dashoffset="35.18583772020568"
+            />
+          </svg>
         </div>
         <div
           class="c11"

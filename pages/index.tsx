@@ -2,6 +2,7 @@ import { x } from '@xstyled/styled-components'
 import PageWrapper from '../components/PageWrapper'
 import Input from '../components/Input'
 import Box from '../components/Box'
+import Donut from '../components/Donut'
 
 export const Home = (): JSX.Element => (
   <PageWrapper title="Next Ticker" subHeader="some text about this app">
@@ -17,7 +18,9 @@ export const Home = (): JSX.Element => (
           <Input title="To Date" />
         </x.div>
       </x.div>
-      <Box title="Information" />
+      <Box title="Information">
+        <Donut max={100} value={60} />
+      </Box>
       <Box title="History" />
     </x.div>
   </PageWrapper>
