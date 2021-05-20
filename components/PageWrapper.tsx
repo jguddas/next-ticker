@@ -17,8 +17,12 @@ export default ({ children, title, subHeader }: Props): JSX.Element => (
       <link rel="icon" href="/favicon.ico" />
     </Head>
     <GlobalStyle />
-    <x.div display="flex" justifyContent={{ md: 'center' }}>
-      <x.div w={{ md: '750px' }} mt="128px" mx="120px">
+    <x.div display="flex" justifyContent="center">
+      <x.div
+        w={{ md: '750px' }}
+        mt={{ _: '54px', sm: '128px' }}
+        mx={{ sm: '120px' }}
+      >
         <Header subHeader={subHeader}>{title}</Header>
         {children}
       </x.div>
