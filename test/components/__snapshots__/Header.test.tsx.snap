@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header matches snapshot 1`] = `
+<DocumentFragment>
+  .c0.c0 {
+  color: heading;
+  font-size: heading;
+  line-height: heading;
+}
+
+<div
+    class="c0"
+  >
+    Hello World
+  </div>
+</DocumentFragment>
+`;

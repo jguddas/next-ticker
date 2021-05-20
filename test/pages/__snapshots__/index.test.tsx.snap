@@ -26,13 +26,33 @@ exports[`Home page matches snapshot 1`] = `
   width: 750px;
 }
 
+.c2.c2 {
+  color: heading;
+  font-size: heading;
+  line-height: heading;
+}
+
+.c3.c3 {
+  color: text;
+  font-size: 1px;
+}
+
 <div
     class="c0"
   >
     <div
       class="c1"
     >
-      Hello World
+      <div
+        class="c2"
+      >
+        Hello World
+      </div>
+      <div
+        class="c3"
+      >
+        …
+      </div>
     </div>
   </div>
 </DocumentFragment>
