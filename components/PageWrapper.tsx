@@ -17,7 +17,7 @@ export default ({ children, title }: Props): JSX.Element => (
     </Head>
     <GlobalStyle />
     <x.div display="flex" justifyContent={{ md: 'center' }}>
-      <x.div w={{ md: '750' }} mt="128" mx="120">
+      <x.div w={{ md: '750px' }} mt="128px" mx="120px">
         <Header>{title}</Header>
         {children}
       </x.div>
