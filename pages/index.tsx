@@ -1,13 +1,7 @@
-import Head from 'next/head'
+import PageWrapper from '../components/PageWrapper'
 
 export const Home = (): JSX.Element => (
-  <div className="container">
-    <Head>
-      <title>Hello World</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
-    Hello World
-  </div>
+  <PageWrapper title="Hello World">Hello World</PageWrapper>
 )
 
 export default Home

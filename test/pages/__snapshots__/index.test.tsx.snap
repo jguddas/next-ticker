@@ -3,9 +3,13 @@
 exports[`Home page matches snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="container"
+    class="sc-cxNHIi YhLon"
   >
-    Hello World
+    <div
+      class="sc-cxNHIi eLfmxP"
+    >
+      Hello World
+    </div>
   </div>
 </DocumentFragment>
 `;
