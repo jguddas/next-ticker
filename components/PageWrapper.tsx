@@ -19,9 +19,10 @@ export default ({ children, title, subHeader }: Props): JSX.Element => (
     <GlobalStyle />
     <x.div display="flex" justifyContent="center">
       <x.div
-        w={{ md: '750px' }}
+        flex="1"
+        w={{ sm: '750px' }}
         mt={{ _: '54px', sm: '128px' }}
-        mx={{ sm: '120px' }}
+        mx={{ _: '54px', sm: '120px' }}
       >
         <Header subHeader={subHeader}>{title}</Header>
         {children}
