@@ -1,0 +1,51 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input matches snapshot 1`] = `
+<DocumentFragment>
+  .c0.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c1.c1 {
+  color: text;
+  font-size: 1px;
+  margin-bottom: 3px;
+}
+
+.c2.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: input;
+  outline: none;
+  color: input;
+  background-color: inputBackground;
+}
+
+<div
+    class="c0"
+  >
+    <div
+      class="c1"
+    >
+      Hello World
+    </div>
+    <input
+      class="c2"
+    />
+  </div>
+</DocumentFragment>
+`;

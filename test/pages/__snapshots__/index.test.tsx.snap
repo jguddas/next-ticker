@@ -27,14 +27,79 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c2.c2 {
+  margin-bottom: 56px;
+}
+
+.c4.c4 {
+  color: text;
+  font-size: 1px;
+}
+
+.c5.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  margin-bottom: 5px;
+}
+
+.c6.c6 {
+  color: text;
+  font-size: 1px;
+  margin-bottom: 3px;
+}
+
+.c8.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 5px;
+}
+
+.c8.c8 undefined {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
+.c9.c9 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c3.c3 {
   color: heading;
   font-size: heading;
   line-height: heading;
 }
 
-.c3.c3 {
-  color: text;
-  font-size: 1px;
+.c7.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding-right: 5px;
+  padding-left: 5px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  font-size: input;
+  outline: none;
+  color: input;
+  background-color: inputBackground;
 }
 
 <div
@@ -46,12 +111,60 @@ exports[`Home page matches snapshot 1`] = `
       <div
         class="c2"
       >
-        Hello World
+        <h1
+          class="c3"
+        >
+          Next Ticker
+        </h1>
+        <div
+          class="c4"
+        >
+          some text about this app
+        </div>
       </div>
       <div
-        class="c3"
+        class="c2"
       >
-        …
+        <div
+          class="c5"
+        >
+          <div
+            class="c6"
+          >
+            Symbol
+          </div>
+          <input
+            class="c7"
+          />
+        </div>
+        <div
+          class="c8"
+        >
+          <div
+            class="c9"
+          >
+            <div
+              class="c6"
+            >
+              From Date
+            </div>
+            <input
+              class="c7"
+            />
+          </div>
+          <div
+            class="c9"
+          >
+            <div
+              class="c6"
+            >
+              To Date
+            </div>
+            <input
+              class="c7"
+            />
+          </div>
+        </div>
       </div>
     </div>
   </div>
