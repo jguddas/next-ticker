@@ -9,3 +9,13 @@ describe('Header', () => {
     expect(asFragment()).toMatchSnapshot()
   })
 })
+
+describe('Header with subHeader', () => {
+  it('matches snapshot', () => {
+    const { asFragment } = render(
+      <Header subHeader="…">Hello World</Header>,
+      {}
+    )
+    expect(asFragment()).toMatchSnapshot()
+  })
+})

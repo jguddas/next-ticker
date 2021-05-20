@@ -7,9 +7,10 @@ import Header from './Header'
 type Props = {
   children: React.ReactNode
   title: string
+  subHeader?: string
 }
 
-export default ({ children, title }: Props): JSX.Element => (
+export default ({ children, title, subHeader }: Props): JSX.Element => (
   <>
     <Head>
       <title>{title}</title>
@@ -18,7 +19,7 @@ export default ({ children, title }: Props): JSX.Element => (
     <GlobalStyle />
     <x.div display="flex" justifyContent={{ md: 'center' }}>
       <x.div w={{ md: '750px' }} mt="128px" mx="120px">
-        <Header>{title}</Header>
+        <Header subHeader={subHeader}>{title}</Header>
         {children}
       </x.div>
     </x.div>

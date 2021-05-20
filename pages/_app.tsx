@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
 import { ThemeProvider, Preflight } from '@xstyled/styled-components'
 import type { AppProps } from 'next/app'
 import defaultTheme from '../theme/default'

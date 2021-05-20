@@ -9,9 +9,43 @@ exports[`Header matches snapshot 1`] = `
 }
 
 <div
-    class="c0"
+    class=""
   >
-    Hello World
+    <h1
+      class="c0"
+    >
+      Hello World
+    </h1>
+  </div>
+</DocumentFragment>
+`;
+
+exports[`Header with subHeader matches snapshot 1`] = `
+<DocumentFragment>
+  .c1.c1 {
+  color: text;
+  font-size: 1px;
+}
+
+.c0.c0 {
+  color: heading;
+  font-size: heading;
+  line-height: heading;
+}
+
+<div
+    class=""
+  >
+    <h1
+      class="c0"
+    >
+      Hello World
+    </h1>
+    <div
+      class="c1"
+    >
+      …
+    </div>
   </div>
 </DocumentFragment>
 `;
