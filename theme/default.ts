@@ -13,6 +13,9 @@ export default {
     donutSecondary: '#E5E5E5',
     donutPrimary: '#523bd4',
   },
+  shadows: {
+    inputFocus: '0 0 0 4px #523bd4',
+  },
   borders: {
     default: '1px solid #2C2C2C',
   },

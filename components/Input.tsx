@@ -11,6 +11,8 @@ export default ({ title, ...props }: Props): JSX.Element => (
   <x.div display="flex" flexDirection="column" flex="1" {...props}>
     <Text mb={3}>{title}</Text>
     <x.input
+      transition="border-color .15s ease-in-out,box-shadow .15s ease-in-out"
+      focusBoxShadow="inputFocus"
       w="100%"
       minWidth="0px"
       flex="1"

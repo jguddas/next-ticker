@@ -197,6 +197,8 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c8.c8 {
+  -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   width: 100%;
   min-width: 0px;
   -webkit-flex: 1;
@@ -210,6 +212,11 @@ exports[`Home page matches snapshot 1`] = `
   outline: none;
   color: input;
   background-color: inputBackground;
+}
+
+.c8.c8:focus {
+  --x-shadow: inputFocus;
+  box-shadow: var(--x-ring-shadow,0 0 #0000),var(--x-shadow);
 }
 
 .c16.c16 {
