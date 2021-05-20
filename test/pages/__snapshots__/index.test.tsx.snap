@@ -13,6 +13,12 @@ exports[`Home page matches snapshot 1`] = `
   justify-content: center;
 }
 
+.c1.c1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
 .c1.c1 undefined {
   width: 750px;
   margin-top: 128px;
@@ -98,6 +104,92 @@ exports[`Home page matches snapshot 1`] = `
   line-height: title;
 }
 
+.c13.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c13.c13 undefined {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.c14.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c14.c14 undefined {
+  -webkit-align-self: right;
+  -ms-flex-item-align: right;
+  align-self: right;
+}
+
+.c18.c18 {
+  width: 140px;
+  height: 140px;
+  position: absolute;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c19.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c20.c20 {
+  color: heading;
+  font-size: title;
+  line-height: 24px;
+}
+
+.c21.c21 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 32px;
+}
+
+.c22.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
 .c3.c3 {
   color: heading;
   font-size: heading;
@@ -120,19 +212,19 @@ exports[`Home page matches snapshot 1`] = `
   background-color: inputBackground;
 }
 
-.c14.c14 {
+.c16.c16 {
   stroke: donutSecondary;
   opacity: 0.125;
 }
 
-.c15.c15 {
+.c17.c17 {
   stroke: donutPrimary;
   -webkit-transform: rotate(-90 16 16);
   -ms-transform: rotate(-90 16 16);
   transform: rotate(-90 16 16);
 }
 
-.c13.c13 {
+.c15.c15 {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
@@ -214,29 +306,105 @@ exports[`Home page matches snapshot 1`] = `
           >
             Information
           </div>
-          <svg
+          <div
             class="c13"
-            height="140"
-            role="img"
-            stroke-width="2"
-            viewBox="0 0 32 32"
-            width="140"
           >
-            <circle
+            <div
               class="c14"
-              cx="16"
-              cy="16"
-              r="14"
-            />
-            <circle
-              class="c15"
-              cx="16"
-              cy="16"
-              r="14"
-              stroke-dasharray="87.96459430051421"
-              stroke-dashoffset="35.18583772020568"
-            />
-          </svg>
+            >
+              <svg
+                class="c15"
+                height="140"
+                role="img"
+                stroke-width="2"
+                viewBox="0 0 32 32"
+                width="140"
+              >
+                <circle
+                  class="c16"
+                  cx="16"
+                  cy="16"
+                  r="14"
+                />
+                <circle
+                  class="c17"
+                  cx="16"
+                  cy="16"
+                  r="14"
+                  stroke-dasharray="87.96459430051421"
+                  stroke-dashoffset="35.18583772020568"
+                />
+              </svg>
+              <div
+                class="c18"
+              >
+                <div
+                  class="c19"
+                >
+                  <div
+                    class="c20"
+                  >
+                    +60%
+                  </div>
+                  <div
+                    class="c4"
+                  >
+                    Growth
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div
+              class="c21"
+            >
+              <div
+                class="c22"
+              >
+                <div
+                  class="c20"
+                >
+                  800000$
+                </div>
+                <div
+                  class="c4"
+                >
+                  Total investments
+                </div>
+              </div>
+              <div
+                class="c22"
+              >
+                <div
+                  class="c20"
+                >
+                  5000$
+                </div>
+                <div
+                  class="c4"
+                >
+                  Simple return
+                </div>
+              </div>
+            </div>
+            <div
+              class="c21"
+            >
+              <div
+                class="c22"
+              >
+                <div
+                  class="c20"
+                >
+                  -80%
+                </div>
+                <div
+                  class="c4"
+                >
+                  Maximum drawdown
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
         <div
           class="c11"
