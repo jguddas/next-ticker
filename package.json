@@ -15,7 +15,9 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": ["lint-staged && yarn run test"],
+      "pre-commit": [
+        "lint-staged && yarn run test"
+      ],
       "pre-push": "yarn run type-check"
     }
   },
@@ -26,9 +28,11 @@
     ]
   },
   "dependencies": {
+    "@xstyled/styled-components": "^2.5.0",
     "next": "latest",
     "react": "^17.0.1",
-    "react-dom": "^17.0.1"
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.3.0"
   },
   "devDependencies": {
     "@testing-library/react": "^11.2.5",
