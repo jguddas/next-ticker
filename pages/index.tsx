@@ -5,6 +5,7 @@ import Box from '../components/Box'
 import Donut from '../components/Donut'
 import InfoElement from '../components/InfoElement'
 import SearchInput from '../components/SearchInput'
+import LineGraph from '../components/LineGraph'
 
 export const Home = (): JSX.Element => (
   <PageWrapper title="Next Ticker" subHeader="some text about this app">
@@ -51,7 +52,9 @@ export const Home = (): JSX.Element => (
           </x.div>
         </x.div>
       </Box>
-      <Box title="History" />
+      <Box title="History">
+        <LineGraph data={new Array(30).fill(null).map(() => Math.random())} />
+      </Box>
     </x.div>
   </PageWrapper>
 )

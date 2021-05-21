@@ -15,6 +15,8 @@ export default {
     dropdownSelectedElement: '#ffffff',
     donutSecondary: '#E5E5E5',
     donutPrimary: '#523bd4',
+    danger: '#dc462e',
+    success: '#75fbc6',
   },
   shadows: {
     inputFocus: '0 0 0 4px #523bd4',
