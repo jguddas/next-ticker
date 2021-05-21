@@ -52,22 +52,42 @@ exports[`Home page matches snapshot 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  gap: 5px;
   margin-bottom: 5px;
 }
 
+.c6.c6 undefined {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+}
+
 .c7.c7 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c8.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+}
+
+.c9.c9 {
   color: text;
   font-size: 1px;
   margin-bottom: 3px;
 }
 
-.c9.c9 {
+.c11.c11 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -75,48 +95,21 @@ exports[`Home page matches snapshot 1`] = `
   gap: 5px;
 }
 
-.c9.c9 undefined {
+.c11.c11 undefined {
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-}
-
-.c10.c10 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.c11.c11 {
-  padding: 40px;
 }
 
 .c12.c12 {
+  padding: 40px;
+}
+
+.c13.c13 {
   margin-bottom: 40px;
   color: title;
   font-size: title;
   line-height: title;
-}
-
-.c13.c13 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c13.c13 undefined {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 40px;
 }
 
 .c14.c14 {
@@ -127,12 +120,26 @@ exports[`Home page matches snapshot 1`] = `
 }
 
 .c14.c14 undefined {
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  gap: 40px;
+}
+
+.c15.c15 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c15.c15 undefined {
   -webkit-align-self: right;
   -ms-flex-item-align: right;
   align-self: right;
 }
 
-.c18.c18 {
+.c19.c19 {
   width: 140px;
   height: 140px;
   position: absolute;
@@ -150,7 +157,7 @@ exports[`Home page matches snapshot 1`] = `
   align-items: center;
 }
 
-.c19.c19 {
+.c20.c20 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -164,13 +171,13 @@ exports[`Home page matches snapshot 1`] = `
   align-items: center;
 }
 
-.c20.c20 {
+.c21.c21 {
   color: heading;
   font-size: title;
   line-height: 24px;
 }
 
-.c21.c21 {
+.c22.c22 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -181,7 +188,7 @@ exports[`Home page matches snapshot 1`] = `
   gap: 32px;
 }
 
-.c22.c22 {
+.c23.c23 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -197,7 +204,7 @@ exports[`Home page matches snapshot 1`] = `
   line-height: heading;
 }
 
-.c8.c8 {
+.c10.c10 {
   -webkit-transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
   width: 100%;
@@ -215,24 +222,24 @@ exports[`Home page matches snapshot 1`] = `
   background-color: inputBackground;
 }
 
-.c8.c8:focus {
+.c10.c10:focus {
   --x-shadow: inputFocus;
   box-shadow: var(--x-ring-shadow,0 0 #0000),var(--x-shadow);
 }
 
-.c16.c16 {
+.c17.c17 {
   stroke: donutSecondary;
   opacity: 0.125;
 }
 
-.c17.c17 {
+.c18.c18 {
   stroke: donutPrimary;
   -webkit-transform: rotate(-90 16 16);
   -ms-transform: rotate(-90 16 16);
   transform: rotate(-90 16 16);
 }
 
-.c15.c15 {
+.c16.c16 {
   -webkit-transform: rotate(-90deg);
   -ms-transform: rotate(-90deg);
   transform: rotate(-90deg);
@@ -269,59 +276,90 @@ exports[`Home page matches snapshot 1`] = `
             class="c6"
           >
             <div
+              aria-expanded="false"
+              aria-haspopup="listbox"
+              aria-owns="downshift-0-menu"
               class="c7"
-            >
-              Symbol
-            </div>
-            <input
-              class="c8"
-            />
-          </div>
-          <div
-            class="c9"
-          >
-            <div
-              class="c10"
+              role="combobox"
+              width="100%"
             >
               <div
-                class="c7"
+                class="c8"
               >
-                From Date
+                <div
+                  class="c9"
+                >
+                  Symbol
+                </div>
+                <input
+                  aria-autocomplete="list"
+                  aria-controls="downshift-0-menu"
+                  aria-labelledby="downshift-0-label"
+                  autocomplete="off"
+                  class="c10"
+                  id="downshift-0-input"
+                  value=""
+                />
+              </div>
+            </div>
+            <div
+              class="c8"
+            >
+              <div
+                class="c9"
+              >
+                Initial investment
               </div>
               <input
-                class="c8"
+                class="c10"
+              />
+            </div>
+          </div>
+          <div
+            class="c11"
+          >
+            <div
+              class="c8"
+            >
+              <div
+                class="c9"
+              >
+                From date
+              </div>
+              <input
+                class="c10"
               />
             </div>
             <div
-              class="c10"
+              class="c8"
             >
               <div
-                class="c7"
+                class="c9"
               >
-                To Date
+                To date
               </div>
               <input
-                class="c8"
+                class="c10"
               />
             </div>
           </div>
         </div>
         <div
-          class="c11"
+          class="c12"
         >
           <div
-            class="c12"
+            class="c13"
           >
             Information
           </div>
           <div
-            class="c13"
+            class="c14"
           >
             <div
-              class="c14"
+              class="c15"
             >
               <svg
-                class="c15"
+                class="c16"
                 height="140"
                 role="img"
                 stroke-width="2"
@@ -329,13 +367,13 @@ exports[`Home page matches snapshot 1`] = `
                 width="140"
               >
                 <circle
-                  class="c16"
+                  class="c17"
                   cx="16"
                   cy="16"
                   r="14"
                 />
                 <circle
-                  class="c17"
+                  class="c18"
                   cx="16"
                   cy="16"
                   r="14"
@@ -344,13 +382,13 @@ exports[`Home page matches snapshot 1`] = `
                 />
               </svg>
               <div
-                class="c18"
+                class="c19"
               >
                 <div
-                  class="c19"
+                  class="c20"
                 >
                   <div
-                    class="c20"
+                    class="c21"
                   >
                     +60%
                   </div>
@@ -363,13 +401,13 @@ exports[`Home page matches snapshot 1`] = `
               </div>
             </div>
             <div
-              class="c21"
+              class="c22"
             >
               <div
-                class="c22"
+                class="c23"
               >
                 <div
-                  class="c20"
+                  class="c21"
                 >
                   800000$
                 </div>
@@ -380,10 +418,10 @@ exports[`Home page matches snapshot 1`] = `
                 </div>
               </div>
               <div
-                class="c22"
+                class="c23"
               >
                 <div
-                  class="c20"
+                  class="c21"
                 >
                   5000$
                 </div>
@@ -395,13 +433,13 @@ exports[`Home page matches snapshot 1`] = `
               </div>
             </div>
             <div
-              class="c21"
+              class="c22"
             >
               <div
-                class="c22"
+                class="c23"
               >
                 <div
-                  class="c20"
+                  class="c21"
                 >
                   -80%
                 </div>
@@ -415,10 +453,10 @@ exports[`Home page matches snapshot 1`] = `
           </div>
         </div>
         <div
-          class="c11"
+          class="c12"
         >
           <div
-            class="c12"
+            class="c13"
           >
             History
           </div>
