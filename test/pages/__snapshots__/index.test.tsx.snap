@@ -36,17 +36,6 @@ exports[`Home page matches snapshot 1`] = `
   font-size: 1px;
 }
 
-.c5.c5 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: column;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  gap: 56px;
-}
-
 .c6.c6 {
   display: -webkit-box;
   display: -webkit-flex;
@@ -101,63 +90,7 @@ exports[`Home page matches snapshot 1`] = `
   flex-direction: row;
 }
 
-.c12.c12 {
-  padding: 40px;
-}
-
-.c13.c13 {
-  margin-bottom: 40px;
-  color: title;
-  font-size: title;
-  line-height: title;
-}
-
-.c14.c14 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c14.c14 undefined {
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 40px;
-}
-
-.c15.c15 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-}
-
-.c15.c15 undefined {
-  -webkit-align-self: right;
-  -ms-flex-item-align: right;
-  align-self: right;
-}
-
-.c19.c19 {
-  width: 140px;
-  height: 140px;
-  position: absolute;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c20.c20 {
+.c5.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -165,44 +98,7 @@ exports[`Home page matches snapshot 1`] = `
   -webkit-flex-direction: row;
   -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-align-items: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.c21.c21 {
-  color: heading;
-  font-size: title;
-  line-height: 24px;
-}
-
-.c22.c22 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-  gap: 32px;
-}
-
-.c23.c23 {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
-  flex-direction: row;
-}
-
-.c24.c24 {
-  -webkit-flex-shrink: 1;
-  -ms-flex-negative: 1;
-  flex-shrink: 1;
-  height: 238px;
+  gap: 56px;
 }
 
 .c3.c3 {
@@ -232,25 +128,6 @@ exports[`Home page matches snapshot 1`] = `
 .c10.c10:focus {
   --x-shadow: inputFocus;
   box-shadow: var(--x-ring-shadow,0 0 #0000),var(--x-shadow);
-}
-
-.c17.c17 {
-  stroke: donutSecondary;
-  opacity: 0.125;
-}
-
-.c18.c18 {
-  stroke: donutPrimary;
-  -webkit-transform: rotate(-90 16 16);
-  -ms-transform: rotate(-90 16 16);
-  transform: rotate(-90 16 16);
-}
-
-.c16.c16 {
-  -webkit-transform: rotate(-90deg);
-  -ms-transform: rotate(-90deg);
-  transform: rotate(-90deg);
-  fill: none;
 }
 
 <div
@@ -305,7 +182,7 @@ exports[`Home page matches snapshot 1`] = `
                   autocomplete="off"
                   class="c10"
                   id="downshift-0-input"
-                  value=""
+                  value="AAPL"
                 />
               </div>
             </div>
@@ -319,6 +196,7 @@ exports[`Home page matches snapshot 1`] = `
               </div>
               <input
                 class="c10"
+                value="80000"
               />
             </div>
           </div>
@@ -335,6 +213,7 @@ exports[`Home page matches snapshot 1`] = `
               </div>
               <input
                 class="c10"
+                value="2020-01-01"
               />
             </div>
             <div
@@ -347,132 +226,9 @@ exports[`Home page matches snapshot 1`] = `
               </div>
               <input
                 class="c10"
+                value="2021-01-01"
               />
             </div>
-          </div>
-        </div>
-        <div
-          class="c12"
-        >
-          <div
-            class="c13"
-          >
-            Information
-          </div>
-          <div
-            class="c14"
-          >
-            <div
-              class="c15"
-            >
-              <svg
-                class="c16"
-                height="140"
-                role="img"
-                stroke-width="2"
-                viewBox="0 0 32 32"
-                width="140"
-              >
-                <circle
-                  class="c17"
-                  cx="16"
-                  cy="16"
-                  r="14"
-                />
-                <circle
-                  class="c18"
-                  cx="16"
-                  cy="16"
-                  r="14"
-                  stroke-dasharray="87.96459430051421"
-                  stroke-dashoffset="35.18583772020568"
-                />
-              </svg>
-              <div
-                class="c19"
-              >
-                <div
-                  class="c20"
-                >
-                  <div
-                    class="c21"
-                  >
-                    +60%
-                  </div>
-                  <div
-                    class="c4"
-                  >
-                    Growth
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div
-              class="c22"
-            >
-              <div
-                class="c23"
-              >
-                <div
-                  class="c21"
-                >
-                  800000$
-                </div>
-                <div
-                  class="c4"
-                >
-                  Total investments
-                </div>
-              </div>
-              <div
-                class="c23"
-              >
-                <div
-                  class="c21"
-                >
-                  5000$
-                </div>
-                <div
-                  class="c4"
-                >
-                  Simple return
-                </div>
-              </div>
-            </div>
-            <div
-              class="c22"
-            >
-              <div
-                class="c23"
-              >
-                <div
-                  class="c21"
-                >
-                  -80%
-                </div>
-                <div
-                  class="c4"
-                >
-                  Maximum drawdown
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="c12"
-        >
-          <div
-            class="c13"
-          >
-            History
-          </div>
-          <div
-            class="c24"
-          >
-            <div
-              style="width: 100%; height: 100%;"
-            />
           </div>
         </div>
       </div>

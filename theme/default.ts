@@ -20,6 +20,7 @@ export default {
   },
   shadows: {
     inputFocus: '0 0 0 4px #523bd4',
+    inputError: '0 0 0 4px #dc462e',
   },
   borders: {
     default: '1px solid #2C2C2C',

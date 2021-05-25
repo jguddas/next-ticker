@@ -40,9 +40,11 @@
     "query-string": "^7.0.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
+    "react-final-form": "^6.5.3",
     "react-laag": "^2.0.2",
     "react-virtualized-auto-sizer": "^1.0.5",
     "styled-components": "^5.3.0",
+    "swr": "^0.5.6",
     "ts-blaze": "^1.8.0"
   },
   "devDependencies": {
