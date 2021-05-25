@@ -17,7 +17,9 @@ const isInitialInvestment = blaze.number().satisfies((val) => val > 0)
 const isInitialInvestmentString = blaze
   .string()
   .satisfies((val) => isInitialInvestment(parseFloat(val)))
-  .satisfies((val) => `${parseFloat(val)}` === val.replace(/0*$/, ''))
+  .satisfies(
+    (val) => `${parseFloat(val)}` === val.replace(/((?<=\.\d+)0+|\.0+)$/, '')
+  )
 const isFromDate = blaze.string().satisfies(isDate)
 const isToDate = blaze.string().satisfies(isDate)
 const isState = blaze.object({
