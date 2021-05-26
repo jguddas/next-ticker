@@ -57,19 +57,19 @@ type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
 
 type Props = { initialData?: Awaited<ReturnType<typeof fetcher>> }
 
+const defaultPath = `/api/series?${stringify({
+  symbol: initialState.symbol,
+  fromDate: initialState.fromDate,
+  toDate: initialState.toDate,
+})}`
+
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   req,
 }) => {
   try {
     const protocol = req.headers?.['x-forwarded-proto'] || 'http'
     const baseUrl = req ? `${protocol}://${req.headers.host}` : ''
-    const initialData = await fetcher(
-      `${baseUrl}/api/series?${stringify({
-        symbol: initialState.symbol,
-        fromDate: initialState.fromDate,
-        toDate: initialState.toDate,
-      })}`
-    )
+    const initialData = await fetcher(`${baseUrl}${defaultPath}`)
     return { props: { initialData } }
   } catch (e) {
     return { props: { initialData: [] } }
@@ -80,14 +80,14 @@ export const Home = ({
   initialData,
 }: InferGetServerSidePropsType<typeof getServerSideProps>): JSX.Element => {
   const [state, setState] = React.useState(initialState)
-  const { data, error } = useSWR(
-    `/api/series?${stringify({
-      symbol: state.symbol,
-      fromDate: state.fromDate,
-      toDate: state.toDate,
-    })}`,
-    fetcher,
-    { initialData }
+  const path = `/api/series?${stringify({
+    symbol: state.symbol,
+    fromDate: state.fromDate,
+    toDate: state.toDate,
+  })}`
+  const { data = path === defaultPath ? initialData : null, error } = useSWR(
+    path,
+    fetcher
   )
   const maxDrawDown = React.useMemo(
     () => (data ? calcMaxDrawdown(data) : null),
