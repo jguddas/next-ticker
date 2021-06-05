@@ -4,20 +4,37 @@ import dayjs from 'dayjs'
 import pMemoize from 'p-memoize'
 import * as blaze from 'ts-blaze'
 import { x } from '@xstyled/styled-components'
-import { stringify } from 'query-string'
+import { stringify, parse } from 'query-string'
 import useSWR from 'swr'
 import PageWrapper from '../components/PageWrapper'
 import Box from '../components/Box'
 import Donut from '../components/Donut'
 import InfoElement from '../components/InfoElement'
 import LineGraph from '../components/LineGraph'
-import Form, { State as FormState } from '../components/Form'
+import Form, {
+  isState as isFromState,
+  isInitialInvestmentString,
+  State as FormState,
+} from '../components/Form'
 
-const initialState: FormState = {
-  symbol: 'AAPL',
-  initialInvestment: 80000,
-  fromDate: '2020-01-01',
-  toDate: '2021-01-01',
+const setSearch = (state: FormState): void => {
+  if (!global?.window) return
+  const newurl = `${window.location.protocol}//${window.location.host}${
+    window.location.pathname
+  }?${stringify(state)}`
+  window.history.pushState({ path: newurl }, '', newurl)
+}
+
+const getSearch = (search: string, defaultValue: FormState): FormState => {
+  const { initialInvestment, ...rest } = parse(search)
+  if (!isInitialInvestmentString(initialInvestment)) return defaultValue
+  blaze.ensure(initialInvestment, isInitialInvestmentString)
+  const searchState = {
+    initialInvestment: parseInt(initialInvestment, 10),
+    ...rest,
+  }
+  if (!isFromState(searchState)) return defaultValue
+  return searchState
 }
 
 const calcMaxDrawdown = (data: { adjustedClose: number }[]) => {
@@ -55,31 +72,43 @@ const fetcher = pMemoize(async (input: RequestInfo, init?: RequestInit) => {
 
 type Awaited<T> = T extends PromiseLike<infer U> ? Awaited<U> : T
 
-type Props = { initialData?: Awaited<ReturnType<typeof fetcher>> }
-
-const defaultPath = `/api/series?${stringify({
-  symbol: initialState.symbol,
-  fromDate: initialState.fromDate,
-  toDate: initialState.toDate,
-})}`
+type Props = {
+  initialData?: Awaited<ReturnType<typeof fetcher>>
+  initialState: FormState
+  defaultPath?: string
+}
 
 export const getServerSideProps: GetServerSideProps<Props> = async ({
   req,
 }) => {
+  const initialState = getSearch(req.url.split('?')[1], {
+    symbol: 'AAPL',
+    initialInvestment: 80000,
+    fromDate: '2020-01-01',
+    toDate: '2021-01-01',
+  })
+  const defaultPath = `/api/series?${stringify({
+    symbol: initialState.symbol,
+    fromDate: initialState.fromDate,
+    toDate: initialState.toDate,
+  })}`
   try {
     const protocol = req.headers?.['x-forwarded-proto'] || 'http'
     const baseUrl = req ? `${protocol}://${req.headers.host}` : ''
     const initialData = await fetcher(`${baseUrl}${defaultPath}`)
-    return { props: { initialData } }
+    return { props: { initialData, initialState, defaultPath } }
   } catch (e) {
-    return { props: { initialData: [] } }
+    return { props: { initialData: [], initialState, defaultPath } }
   }
 }
 
 export const Home = ({
   initialData,
+  initialState,
+  defaultPath,
 }: InferGetServerSidePropsType<typeof getServerSideProps>): JSX.Element => {
   const [state, setState] = React.useState(initialState)
+  React.useEffect(() => setSearch(state), [state])
   const path = `/api/series?${stringify({
     symbol: state.symbol,
     fromDate: state.fromDate,

@@ -14,7 +14,7 @@ const isSymbol = blaze.oneOf([
   blaze.string('NVDA'),
 ])
 const isInitialInvestment = blaze.number().satisfies((val) => val > 0)
-const isInitialInvestmentString = blaze
+export const isInitialInvestmentString = blaze
   .string()
   .satisfies((val) => isInitialInvestment(parseFloat(val)))
   .satisfies(
@@ -22,7 +22,7 @@ const isInitialInvestmentString = blaze
   )
 const isFromDate = blaze.string().satisfies(isDate)
 const isToDate = blaze.string().satisfies(isDate)
-const isState = blaze.object({
+export const isState = blaze.object({
   symbol: isSymbol,
   initialInvestment: isInitialInvestment,
   fromDate: isFromDate,
