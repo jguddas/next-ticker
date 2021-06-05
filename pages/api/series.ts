@@ -3,6 +3,7 @@ import dayjs from 'dayjs'
 import pMemoize from 'p-memoize'
 import { stringify } from 'query-string'
 import { NextApiRequest, NextApiResponse } from 'next'
+import Redis from 'ioredis'
 
 // this can be replaced with blaze.record when the pr is merged
 // https://github.com/marcesengel/ts-blaze/pull/2
@@ -67,9 +68,14 @@ type RequestQuery = blaze.InferValidatorType<typeof isRequestQuery>
 
 const isApiKey = blaze.string().satisfies(Boolean)
 
-const mFetchJson = pMemoize((input: RequestInfo, init?: RequestInit) =>
-  fetch(input, init).then((r) => r.json())
-)
+const redis = process.env.REDIS_URL && new Redis(process.env.REDIS_URL)
+const mFetchJson = pMemoize(async (url: string) => {
+  const cachedResponse = await redis?.get(url)
+  if (cachedResponse) return JSON.parse(cachedResponse)
+  const response = await fetch(url).then((r) => r.json())
+  redis?.set(url, JSON.stringify(response))
+  return response
+})
 
 const fetcher = async ({ fromDate, toDate, symbol }: RequestQuery) => {
   if (!isApiKey(process.env.API_KEY)) {
