@@ -70,7 +70,7 @@ const isApiKey = blaze.string().satisfies(Boolean)
 
 const redis = process.env.REDIS_URL && new Redis(process.env.REDIS_URL)
 const mFetchJson = pMemoize(async (url: string) => {
-  const cachedResponse = await redis?.get(url)
+  const cachedResponse = await redis?.get(url).catch(() => null)
   if (cachedResponse) return JSON.parse(cachedResponse)
   const response = await fetch(url).then((r) => r.json())
   redis?.set(url, JSON.stringify(response))
